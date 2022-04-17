@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af8b8971-ef76-470e-b568-5f898708b0d2" name="変更" comment="base用　起動確認済み">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="af8b8971-ef76-470e-b568-5f898708b0d2" name="変更" comment="sql変更">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/komimi_crud.go" beforeDir="false" afterPath="$PROJECT_DIR$/komimi_crud.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +92,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="base用　起動確認済み" />
-    <option name="LAST_COMMIT_MESSAGE" value="base用　起動確認済み" />
+    <MESSAGE value="sql変更" />
+    <option name="LAST_COMMIT_MESSAGE" value="sql変更" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
