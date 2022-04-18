@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"html/template"
 	"io/ioutil"
 	"log"
@@ -52,22 +53,28 @@ func viewHandler(w http.ResponseWriter, r *http.Request, title string) {
 	}
 	key1 := r.URL.Query().Get("key1")
 	key2 := r.URL.Query().Get("key2")
+	key3 := r.URL.Query().Get("userId")
+	key4 := r.URL.Query().Get("addBalance")
+	key5 := r.URL.Query().Get("presentBalance")
+	fmt.Println(key3, key4, key5)
 	p.Key1 = key1
 	p.Key2 = key2
 	account := AccountInfo{key1, key2, "0", false}
-	ac := account.SelectAnyId()
-	p.CustomerBalance = ac[0].CustomerBalance
-	balance, _ := strconv.Atoi(p.CustomerBalance)
-	pay, _ := strconv.Atoi(key2)
-	if balance > pay {
-		p.CustomerPaymentInformation = true
+	ac, err := account.SelectAnyId()
+	if err != nil {
+		p.CustomerBalance = ac[0].CustomerBalance
+		balance, _ := strconv.Atoi(p.CustomerBalance)
+		pay, _ := strconv.Atoi(key2)
+		if balance > pay {
+			p.CustomerPaymentInformation = true
 
-		account.CustomerBalance = strconv.Itoa(balance - pay)
-		p.Information = key2 + "の決済が完了できました。残高は「" + account.CustomerBalance + "」です。"
-		account.Update()
-	} else {
-		p.CustomerPaymentInformation = false
-		p.Information = "決済が出来ませんでした。"
+			account.CustomerBalance = strconv.Itoa(balance - pay)
+			p.Information = key2 + "の決済が完了できました。残高は「" + account.CustomerBalance + "」です。"
+			account.Update()
+		} else {
+			p.CustomerPaymentInformation = false
+			p.Information = "決済が出来ませんでした。"
+		}
 	}
 	renderTemplate(w, "view", p)
 }

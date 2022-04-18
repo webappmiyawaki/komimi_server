@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="postgres@localhost">
-  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.32">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.38">
     <root id="1">
       <DateStyle>ymd</DateStyle>
       <IntrospectionStateNumber>3507</IntrospectionStateNumber>
@@ -7677,15 +7677,15 @@ sequence|table|17556|17558|1
       <TypeId>1043</TypeId>
     </column>
     <index id="531" parent="509" name="legend_pkey">
-      <ClassIds>1978</ClassIds>
       <ColNames>id</ColNames>
-      <CollationIds>0</CollationIds>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17554</ObjectId>
       <Primary>1</Primary>
       <StateNumber>3159</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
+      <ClassIds>1978</ClassIds>
+      <CollationIds>0</CollationIds>
     </index>
     <key id="532" parent="509" name="legend_pkey">
       <ColNames>id</ColNames>
@@ -7728,15 +7728,15 @@ sequence|table|17556|17558|1
       <RefTableKind>table</RefTableKind>
     </foreign-key>
     <index id="537" parent="510" name="player_pkey">
-      <ClassIds>1978</ClassIds>
       <ColNames>id</ColNames>
-      <CollationIds>0</CollationIds>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17562</ObjectId>
       <Primary>1</Primary>
       <StateNumber>3163</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
+      <ClassIds>1978</ClassIds>
+      <CollationIds>0</CollationIds>
     </index>
     <key id="538" parent="510" name="player_pkey">
       <ColNames>id</ColNames>
@@ -7767,15 +7767,15 @@ sequence|table|17556|17558|1
       <TypeId>1043</TypeId>
     </column>
     <index id="542" parent="511" name="posts_pkey">
-      <ClassIds>1978</ClassIds>
       <ColNames>id</ColNames>
-      <CollationIds>0</CollationIds>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17546</ObjectId>
       <Primary>1</Primary>
       <StateNumber>3146</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
+      <ClassIds>1978</ClassIds>
+      <CollationIds>0</CollationIds>
     </index>
     <key id="543" parent="511" name="posts_pkey">
       <ColNames>id</ColNames>
@@ -7806,16 +7806,16 @@ sequence|table|17556|17558|1
       <TypeId>23</TypeId>
     </column>
     <index id="547" parent="512" name="sample_pkey">
-      <ClassIds>10012</ClassIds>
       <ColNames>id</ColNames>
-      <CollationIds>100</CollationIds>
-      <CollationNames>default</CollationNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16402</ObjectId>
       <Primary>1</Primary>
       <StateNumber>585</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
+      <ClassIds>10012</ClassIds>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
     </index>
     <key id="548" parent="512" name="sample_pkey">
       <ColNames>id</ColNames>
@@ -7863,15 +7863,15 @@ sequence|table|17556|17558|1
       <TypeId>1082</TypeId>
     </column>
     <index id="555" parent="513" name="shohin_pkey">
-      <ClassIds>1978</ClassIds>
       <ColNames>shohin_id</ColNames>
-      <CollationIds>0</CollationIds>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17345</ObjectId>
       <Primary>1</Primary>
       <StateNumber>2659</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
+      <ClassIds>1978</ClassIds>
+      <CollationIds>0</CollationIds>
     </index>
     <key id="556" parent="513" name="shohin_pkey">
       <ColNames>shohin_id</ColNames>

@@ -76,7 +76,16 @@ func KomimiUpdateAny() {
 	b = b * 2
 	ac.CustomerBalance = strconv.Itoa(b)
 	ac.Update()
+}
 
+func KomimiUpdateBalance(id string, balance string) {
+	ac := KomimiSelectAny()
+	fmt.Println()
+	ac.CustomerPayment = "10000"
+	b, _ := strconv.Atoi(ac.CustomerBalance)
+	b = b * 2
+	ac.CustomerBalance = strconv.Itoa(b)
+	ac.Update()
 }
 
 func KomimiImport() {

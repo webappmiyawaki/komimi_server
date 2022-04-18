@@ -4,7 +4,15 @@
 <p><a href="http://localhost:8080/SendApp/SendMain.jsp?key1={{.Key1}}&key2={{.Key2}}&key3={{.CustomerBalance}}&key4={{.CustomerPaymentInformation}}">決済完了</a></p>
 <div>{{printf "%s" .Body}}</div>
 <p>ID:{{.Key1}}</p>
-<p>Name:{{.Key2}}</p>
+<p>Payment:{{.Key2}}</p>
 <p>Balance:{{.CustomerBalance}}</p>
 <p>isBalance:{{.CustomerPaymentInformation}}</p>
 <p>{{.Information}}</p>
+
+ログイン
+<form action="/view/test" method="get">
+    id  :<input  type="text" value={{.Key1}} name="userId"><br>
+    追加する金額:<input  type="text" value="" name="addBalance"><br>
+    現在の残高：<input type="text" value={{.CustomerBalance}} readonly="readonly" name="presentBalance"><br>
+    <input  type="submit" value="確定" name="select">
+</form>

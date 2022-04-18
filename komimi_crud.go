@@ -7,7 +7,7 @@ import (
 func (accountInfo *AccountInfo) Create() (err error) {
 	fmt.Printf("id:%v name:%v balance:%v\n", accountInfo.CustomerId, accountInfo.CustomerPayment, accountInfo.CustomerBalance)
 
-	Db.Exec("INSERT INTO account_info(customer_id, customer_name, customer_balance) VALUES ($1,$2,$3)",
+	Db.Exec("INSERT INTO account_info(customer_id, customer_payment, customer_balance) VALUES ($1,$2,$3)",
 		accountInfo.CustomerId,
 		accountInfo.CustomerPayment,
 		accountInfo.CustomerBalance,
@@ -61,7 +61,7 @@ func (accountInfo *AccountInfo) SelectAny(id int) (ac []AccountInfo, err error) 
 	return
 }
 
-func (accountInfo *AccountInfo) SelectAnyId() (ac []AccountInfo) {
+func (accountInfo *AccountInfo) SelectAnyId() (ac []AccountInfo, err error) {
 	rows, _ := Db.Query("SELECT * FROM account_info WHERE customer_id=$1",
 		accountInfo.CustomerId,
 	)
@@ -76,7 +76,7 @@ func (accountInfo *AccountInfo) SelectAnyId() (ac []AccountInfo) {
 }
 
 func (accountInfo *AccountInfo) Update() (ac []AccountInfo, err error) {
-	Db.Exec("UPDATE account_info SET customer_name=$1,customer_balance=$2 WHERE customer_id=$3",
+	Db.Exec("UPDATE account_info SET customer_payment=$1,customer_balance=$2 WHERE customer_id=$3",
 		accountInfo.CustomerPayment,
 		accountInfo.CustomerBalance,
 		accountInfo.CustomerId,
