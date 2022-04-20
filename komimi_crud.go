@@ -47,7 +47,7 @@ func (accountInfo *AccountInfo) DeleteAny(id int) (err error) {
 	return
 }
 
-func (accountInfo *AccountInfo) SelectAny(id int) (ac []AccountInfo, err error) {
+func (accountInfo *AccountInfo) SelectAny(id string) (ac []AccountInfo, err error) {
 	rows, _ := Db.Query("SELECT * FROM account_info WHERE customer_id=$1",
 		id,
 	)

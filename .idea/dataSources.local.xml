@@ -14,7 +14,11 @@
             <node kind="database" qname="@">
               <node kind="schema" qname="@" />
             </node>
-            <node kind="database" qname="komimi_server" />
+            <node kind="database">
+              <name qname="komimi_chan_t_1" />
+              <name qname="komimi_server" />
+              <node kind="schema" qname="public" />
+            </node>
           </node>
         </introspection-scope>
       </schema-mapping>

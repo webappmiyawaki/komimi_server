@@ -58,10 +58,10 @@ func KomimiSelectAny() (accountInfo AccountInfo) {
 	st := scanner.Text()
 
 	//文字列を数字に変換
-	i, _ := strconv.Atoi(st)
+	//i, _ := strconv.Atoi(st)
 
 	//変換した数字を使って検索。エラーは受け取っていない
-	ac, _ := accountInfo.SelectAny(i)
+	ac, _ := accountInfo.SelectAny(st)
 	fmt.Println(ac[0])
 	return ac[0]
 }
