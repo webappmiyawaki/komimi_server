@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="postgres@localhost">
-  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.32">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.38">
     <root id="1">
       <DateStyle>ymd</DateStyle>
       <IntrospectionStateNumber>6268</IntrospectionStateNumber>
@@ -11046,15 +11046,15 @@ sequence|table|17431|17433|1
       <TypeId>1043</TypeId>
     </column>
     <index id="781" parent="749" name="legend_pkey">
-      <ClassIds>1978</ClassIds>
       <ColNames>id</ColNames>
-      <CollationIds>0</CollationIds>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17554</ObjectId>
       <Primary>1</Primary>
       <StateNumber>3159</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
+      <ClassIds>1978</ClassIds>
+      <CollationIds>0</CollationIds>
     </index>
     <key id="782" parent="749" name="legend_pkey">
       <ColNames>id</ColNames>
@@ -11097,15 +11097,15 @@ sequence|table|17431|17433|1
       <RefTableKind>table</RefTableKind>
     </foreign-key>
     <index id="787" parent="750" name="player_pkey">
-      <ClassIds>1978</ClassIds>
       <ColNames>id</ColNames>
-      <CollationIds>0</CollationIds>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17562</ObjectId>
       <Primary>1</Primary>
       <StateNumber>3163</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
+      <ClassIds>1978</ClassIds>
+      <CollationIds>0</CollationIds>
     </index>
     <key id="788" parent="750" name="player_pkey">
       <ColNames>id</ColNames>
@@ -11136,15 +11136,15 @@ sequence|table|17431|17433|1
       <TypeId>1043</TypeId>
     </column>
     <index id="792" parent="751" name="posts_pkey">
-      <ClassIds>1978</ClassIds>
       <ColNames>id</ColNames>
-      <CollationIds>0</CollationIds>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17546</ObjectId>
       <Primary>1</Primary>
       <StateNumber>3146</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
+      <ClassIds>1978</ClassIds>
+      <CollationIds>0</CollationIds>
     </index>
     <key id="793" parent="751" name="posts_pkey">
       <ColNames>id</ColNames>
@@ -11175,16 +11175,16 @@ sequence|table|17431|17433|1
       <TypeId>23</TypeId>
     </column>
     <index id="797" parent="752" name="sample_pkey">
-      <ClassIds>10012</ClassIds>
       <ColNames>id</ColNames>
-      <CollationIds>100</CollationIds>
-      <CollationNames>default</CollationNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16402</ObjectId>
       <Primary>1</Primary>
       <StateNumber>585</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
+      <ClassIds>10012</ClassIds>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
     </index>
     <key id="798" parent="752" name="sample_pkey">
       <ColNames>id</ColNames>
@@ -11232,15 +11232,15 @@ sequence|table|17431|17433|1
       <TypeId>1082</TypeId>
     </column>
     <index id="805" parent="753" name="shohin_pkey">
-      <ClassIds>1978</ClassIds>
       <ColNames>shohin_id</ColNames>
-      <CollationIds>0</CollationIds>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17345</ObjectId>
       <Primary>1</Primary>
       <StateNumber>2659</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
+      <ClassIds>1978</ClassIds>
+      <CollationIds>0</CollationIds>
     </index>
     <key id="806" parent="753" name="shohin_pkey">
       <ColNames>shohin_id</ColNames>
@@ -11308,15 +11308,15 @@ sequence|table|17431|17433|1
       <RefTableKind>table</RefTableKind>
     </foreign-key>
     <index id="815" parent="756" name="product_by_talent_pk">
-      <ClassIds>3126</ClassIds>
       <ColNames>product_id</ColNames>
-      <CollationIds>100</CollationIds>
-      <CollationNames>default</CollationNames>
       <ObjectId>17482</ObjectId>
       <Primary>1</Primary>
       <StateNumber>6230</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
+      <ClassIds>3126</ClassIds>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
     </index>
     <key id="816" parent="756" name="product_by_talent_pk">
       <ColNames>product_id</ColNames>
@@ -11393,15 +11393,15 @@ sequence|table|17431|17433|1
       <TypeId>1043</TypeId>
     </column>
     <index id="828" parent="757" name="talent_base_info_pk">
-      <ClassIds>3126</ClassIds>
       <ColNames>talent_id</ColNames>
-      <CollationIds>100</CollationIds>
-      <CollationNames>default</CollationNames>
       <ObjectId>17484</ObjectId>
       <Primary>1</Primary>
       <StateNumber>5482</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
+      <ClassIds>3126</ClassIds>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
     </index>
     <key id="829" parent="757" name="talent_base_info_pk">
       <ColNames>talent_id</ColNames>
@@ -11461,15 +11461,15 @@ sequence|table|17431|17433|1
       <RefTableKind>table</RefTableKind>
     </foreign-key>
     <index id="837" parent="758" name="talent_live_info_pk">
-      <ClassIds>3126</ClassIds>
       <ColNames>talent_id</ColNames>
-      <CollationIds>100</CollationIds>
-      <CollationNames>default</CollationNames>
       <ObjectId>17438</ObjectId>
       <Primary>1</Primary>
       <StateNumber>5482</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
+      <ClassIds>3126</ClassIds>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
     </index>
     <key id="838" parent="758" name="talent_live_info_pk">
       <ColNames>talent_id</ColNames>
@@ -11511,15 +11511,15 @@ sequence|table|17431|17433|1
       <TypeId>1043</TypeId>
     </column>
     <index id="844" parent="759" name="user_base_info_pk">
-      <ClassIds>3126</ClassIds>
       <ColNames>user_id</ColNames>
-      <CollationIds>100</CollationIds>
-      <CollationNames>default</CollationNames>
       <ObjectId>17486</ObjectId>
       <Primary>1</Primary>
       <StateNumber>6077</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
+      <ClassIds>3126</ClassIds>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
     </index>
     <key id="845" parent="759" name="user_base_info_pk">
       <ColNames>user_id</ColNames>
@@ -11612,14 +11612,14 @@ sequence|table|17431|17433|1
       <RefTableKind>table</RefTableKind>
     </foreign-key>
     <index id="856" parent="761" name="user_purchase_history_pk">
-      <ClassIds>1978</ClassIds>
       <ColNames>history_no</ColNames>
-      <CollationIds>0</CollationIds>
       <ObjectId>17480</ObjectId>
       <Primary>1</Primary>
       <StateNumber>6077</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
+      <ClassIds>1978</ClassIds>
+      <CollationIds>0</CollationIds>
     </index>
     <key id="857" parent="761" name="user_purchase_history_pk">
       <ColNames>history_no</ColNames>
@@ -11675,14 +11675,14 @@ sequence|table|17431|17433|1
       <RefTableKind>table</RefTableKind>
     </foreign-key>
     <index id="863" parent="762" name="user_request_pk">
-      <ClassIds>1978</ClassIds>
       <ColNames>request_no</ColNames>
-      <CollationIds>0</CollationIds>
       <ObjectId>17478</ObjectId>
       <Primary>1</Primary>
       <StateNumber>6077</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
+      <ClassIds>1978</ClassIds>
+      <CollationIds>0</CollationIds>
     </index>
     <key id="864" parent="762" name="user_request_pk">
       <ColNames>request_no</ColNames>

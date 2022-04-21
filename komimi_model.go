@@ -55,15 +55,21 @@ func KomimiSelectAny() (accountInfo AccountInfo) {
 
 	//scan
 	scanner.Scan()
-	st := scanner.Text()
-
-	//文字列を数字に変換
-	//i, _ := strconv.Atoi(st)
+	id := scanner.Text()
 
 	//変換した数字を使って検索。エラーは受け取っていない
-	ac, _ := accountInfo.SelectAny(st)
-	fmt.Println(ac[0])
-	return ac[0]
+	//ac, _ := accountInfo.SelectAny(id)
+
+	_ = Db.QueryRow("SELECT customer_id FROM account_info WHERE customer_id=$1",
+		id,
+	).Scan(&accountInfo.CustomerId)
+
+	_ = Db.QueryRow("SELECT customer_balance FROM account_info WHERE customer_id=$1",
+		id,
+	).Scan(&accountInfo.CustomerBalance)
+
+	fmt.Println(accountInfo)
+	return
 }
 func KomimiUpdateAny() {
 	KomimiSelectAll()

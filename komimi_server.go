@@ -55,8 +55,7 @@ func viewHandler(w http.ResponseWriter, r *http.Request, title string) {
 	p.Key1 = key1
 	p.Key2 = key2
 	account := AccountInfo{key1, key2, "0", false}
-	ac := account.SelectAnyId()
-	p.CustomerBalance = ac[0].CustomerBalance
+	p.CustomerBalance = account.SelectAnyId().CustomerBalance
 	balance, _ := strconv.Atoi(p.CustomerBalance)
 	pay, _ := strconv.Atoi(key2)
 	if balance > pay {

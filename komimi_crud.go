@@ -61,17 +61,11 @@ func (accountInfo *AccountInfo) SelectAny(id string) (ac []AccountInfo, err erro
 	return
 }
 
-func (accountInfo *AccountInfo) SelectAnyId() (ac []AccountInfo) {
-	rows, _ := Db.Query("SELECT * FROM account_info WHERE customer_id=$1",
+func (accountInfo *AccountInfo) SelectAnyId() (ac AccountInfo) {
+	_ = Db.QueryRow("SELECT customer_balance FROM account_info WHERE customer_id=$1",
 		accountInfo.CustomerId,
-	)
-
-	for rows.Next() {
-		var a AccountInfo
-		rows.Scan(&a.CustomerId, &a.CustomerPayment, &a.CustomerBalance)
-		ac = append(ac, a)
-	}
-	rows.Close()
+	).Scan(&accountInfo.CustomerBalance)
+	ac = *accountInfo
 	return
 }
 
